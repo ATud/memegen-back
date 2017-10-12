@@ -1,1 +1,3 @@
 node_modules
+# Webstorm Idea Files
+*.idea

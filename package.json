@@ -1,0 +1,23 @@
+{
+  "name": "memegen",
+  "version": "1.0.0",
+  "description": "memegenerator app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.13.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

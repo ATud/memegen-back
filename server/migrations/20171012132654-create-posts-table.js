@@ -9,9 +9,8 @@ module.exports = {
                 autoIncrement: true
             },
             url: {
-                type: Sequelize.STRING,
-                allowNull: false,
-                length:500
+                type: Sequelize.STRING(500),
+                allowNull: false
             }
 
         });

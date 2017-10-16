@@ -5,14 +5,16 @@
     "database": "memegenerator",
     "host": "127.0.0.1",
   "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "createdAt": "createdat",
+    "updatedAt": "updatedat"
   },
   "test": {
  "username": "postgres",
     "password": "admin",
     "database": "memegenerator",
     "host": "127.0.0.1",
-      "port": 5432,
+    "port": 5432,
     "dialect": "postgres"
   },
   "production": {

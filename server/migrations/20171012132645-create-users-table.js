@@ -7,32 +7,29 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
+                allowNull:false
             },
             username: {
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(256),
                 unique: true,
-                allowNull: false,
-                length:256
+                allowNull: false
             },
             email: {
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(256),
                 unique: true,
-                allowNull: false,
-                length:256
+                allowNull: false
             },
             password: {
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(256),
                 allowNull: false
             },
             description: {
-                type: Sequelize.STRING,
-                allowNull: true,
-                length:500
+                type: Sequelize.STRING(500),
+                allowNull: true
             },
             avatarUrl: {
-                type: Sequelize.STRING,
-                allowNull: true,
-                length:500
+                type: Sequelize.STRING(500),
+                allowNull: true
             },
             age: {
                 type: Sequelize.INTEGER,

@@ -2,27 +2,7 @@ const models = require('../models');
 const express = require('express');
 const router = express.Router();
 
-router.post('/create', function (req, res) {
-    models.Users.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password,
-        description: req.body.description,
-        avatarUrl: req.body.avatarUrl,
-        age: req.body.age
-    }).then(function (user) {
-        res.send({
-            message: user
-        });
-        console.log('success');
-    })
-        .catch(function (err) {
-            res.json({
-                message: 'Existing user with this name or email'
-            });
-            console.log(err, req.body.username, req.body.email);
-        });
-});
+
 
 router.get('/get', function (req, res) {
     models.Users.findAll().then(function (users) {

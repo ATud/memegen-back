@@ -11,42 +11,6 @@ const models  = require('../models');
 app.set('authToken','generaretoken');
 
 
-router.post('/login', function(req, res) {
-
-    // find the user
-    models.Users.findOne({
-        where:{
-            username: req.body.username
-        }
-
-    }).then( function(user) {
-        if (!user) {
-            res.json({ success: false, message: 'Authentication failed. User not found.' });
-        } else if (user) {
-
-            // check if password matches
-            if (user.password !== req.body.password) {
-                res.json({ success: false, message: 'Authentication failed. Wrong password.' });
-            } else {
-
-                // if user is found and password is right
-                // create a token
-
-                var token = jwt.sign(false, app.get('authToken'), {
-                });
-
-                res.json({
-                    success: true,
-                    message: 'Enjoy your token!',
-                    token: token
-                });
-            }
-
-        }
-
-    });
-});
-
 //middleware
 router.use(function(req, res, next) {
 

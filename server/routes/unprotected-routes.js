@@ -4,6 +4,28 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const app = express();
 app.set('authToken','generaretoken');
+
+router.post('/getUserByUsername', function (req, res) {
+    models.Users.count({
+        where: {
+            username: req.body.username
+        }
+    }).then(function (response) {
+       res.json(response)
+    });
+});
+router.post('/getUserByEmail', function (req, res) {
+    models.Users.count({
+        where: {
+            email:  req.body.email
+
+        }
+    }).then(function (response) {
+        console.log(req.body.email);
+        console.log(response);
+       res.json(response)
+    });
+});
 router.post('/register', function (req, res) {
     let existingUsername=false;
     let existingEmail=false;
